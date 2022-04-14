@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"연산에 필요한 숫자가 입력되지 않았습니다.",Toast.LENGTH_LONG).show();
                 return; //현재 메소드를 빠져나감
             }
-            int num1=Integer.parseInt(edit1Str);
-            int num2=Integer.parseInt(edit2Str);
-            int result=0;
+            double num1=Double.parseDouble(edit1Str);
+            double num2=Double.parseDouble(edit2Str);
+            double result=0;
             switch (view.getId())
             {
                 case R.id.btn_plus:
