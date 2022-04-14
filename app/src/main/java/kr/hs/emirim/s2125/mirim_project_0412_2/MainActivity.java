@@ -17,20 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Button btnPlus= findViewById(R.id.btn_plus);
-//        Button btnMinus= findViewById(R.id.btn_minus);
-//        Button btnMulti= findViewById(R.id.btn_multi);
-//        Button btnDivide= findViewById(R.id.btn_divide);
-//
-//        btnPlus.setOnClickListener();
-//        btnMinus.setOnClickListener();
-//        btnMulti.setOnClickListener();
-//        btnDivide.setOnClickListener();
-
         edit1=findViewById(R.id.edit1);
         edit2=findViewById(R.id.edit2);
         textResult=findViewById(R.id.text_result);
-        int[] btnId={R.id.btn_plus, R.id.btn_minus, R.id.btn_multi, R.id.btn_divide};
+        int[] btnId={R.id.btn_plus, R.id.btn_minus, R.id.btn_multi, R.id.btn_divide, R.id.btn_mod};
         Button[] btn= new Button[btnId.length];
         for(int i=0; i<btn.length; i++)
         {
@@ -60,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_divide:
                     result=num1/num2;
+                    break;
+                case R.id.btn_mod:
+                    result=num1%num2;
                     break;
             }
             textResult.setText(R.string.text_result);
