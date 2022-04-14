@@ -54,9 +54,17 @@ public class MainActivity extends AppCompatActivity {
                     result=num1*num2;
                     break;
                 case R.id.btn_divide:
+                    if(num2==0) {
+                        Toast.makeText(getApplicationContext(), "0으로 나누는 것은 불가능합니다.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                     result=num1/num2;
                     break;
                 case R.id.btn_mod:
+                    if(num2==0) {
+                        Toast.makeText(getApplicationContext(), "0으로 나누는 것은 불가능합니다.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                     result=num1%num2;
                     break;
             }
